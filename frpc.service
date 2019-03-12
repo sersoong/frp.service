@@ -7,7 +7,7 @@ After=network.target
 Type=simple
 User=*** # set the user for this service
 WorkingDirectory=/home/***/frp # path to your gogs directory
-ExecStart=/home/***/frp/frpc -c frps.ini # path to your gogs executioner
+ExecStart=/home/***/frp/frpc -c frpc.ini # path to your gogs executioner
 ExecStop=/bin/kill -WINCH ${MAINPID}
 Restart=on-failure
 Environment=USER=*** HOME=/home/*** # set the execute USER and HOME value to Environment
